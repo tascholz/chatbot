@@ -1,0 +1,96 @@
+{
+  "intents": [    
+    {
+    	"tag": "greeting",
+    	"patterns": [
+    		"Hello",
+    		"Hi",
+    		"Hi there"
+    	],
+    	"responses": [
+    		"Hi, how can I help you?",
+    		"Hi there!",
+    		"What can I do for you?",
+    		"Can I help you?"
+    	]
+    },
+    {
+    	"tag": "goodbye",
+    	"patterns": [
+    		"Bye",
+    		"See you",
+    		"Goodbye",
+    		"Ciao",
+    		"See ya"
+    	],
+    	"responses": [
+    		"If you want to leave the chat, type quit",
+    		"Type quit to leave the chat",
+    		"Do you want to leave? Just type quit",
+    		"Type quit to leave the chat"
+    	]
+    },
+        {
+    	"tag": "about_bot",
+    	"patterns": [
+    		"Who are you",
+    		"What are you",
+    		"What is your name"
+    	],
+    	"responses": [
+    		"I am Sam, a chatbot to help you with your needs",
+    		"My name is Sam. I am a chatbot which was created to help you",
+    		"I am a chatbot. My name is Sam. If you need anything, just ask",
+    		"I am a virtual chatbot named Sam."
+    	]
+    },
+
+        {
+    	"tag": "products",
+    	"patterns": [
+    		"What do you sell",
+    		"Can you show me your menu",
+    		"Do you have coffe",
+    		"I want to eat something"
+    	],
+    	"responses": [
+    		"We serve pizza and softdrinks. Here is a link to our menu: www.pizzamenu.de",
+    		"We offer a variety of pizza and softdrinks. You can view our menu here: www.pizzamenu.de",
+    		"If you're looking for delicious pizza or softdrinks, you found the right place. Here is a link to our menu: www.pizzamenu.de",
+    		"We serve the best pizza in town. You also want a softdrink? No problem! Here is our menu: www.pizzamenu.de"
+    	]
+    },
+        {
+    	"tag": "price",
+    	"patterns": [
+    		"how much is a pizza",
+    		"how much is a softdrink",
+    		"what does a pizza cost",
+    		"what does a softdrink cost"
+    	],
+    	"responses": [
+    		"A pizza costs 5 euros, a softdrink is 2 euros",
+    		"All our pizzas cost 5 euros. You can have a softdrink for 2 euros"
+    	]
+    },
+        {
+    	"tag": "too_expensive",
+    	"patterns": [
+    		"That is really expensive",
+    		"I can not afford that",
+    		"That is too expensive",
+    		"That is too much for a pizza",
+    		"I do not have enough money",
+    		"Can I get a discount",
+    		"Can you give it for free"
+    	],
+    	"responses": [
+    		"Maybe you need to work more",
+    		"Haha, you're poor",
+    		"Get lost",
+    		"Ha noob! Get rich or die trying"
+    	]
+    }
+
+  ]
+}
