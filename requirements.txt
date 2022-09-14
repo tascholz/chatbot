@@ -1,0 +1,4 @@
+nltk==3.6.3
+numpy==1.19.5
+python_telegram_bot==13.8.1
+torch==1.10.0
