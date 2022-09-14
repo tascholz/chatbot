@@ -1,33 +1,23 @@
-from telegram.ext import Updater, CallbackContext, CommandHandler, MessageHandler, Filters
+
 from telegram import Update
-from chatbot import Chatbot
+from chatbot import Chatbot, TelegramBot
 from trainer import Trainer
 
+class Bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
 
-class TelegramBot():
-	def __init__(self):
-
-
-		self.updater = Updater(token='2102452317:AAFNft6A_qjmYd4Od6p5Z0UNw1FzRmozr0g', use_context=True)
-		self.dispatcher = self.updater.dispatcher
-
-	def start(self, update: Update, context: CallbackContext):
-		context.bot.send_message(chat_id = update.effective_chat.id, text="I am a bot, please talk to me")
-
-	def echo(self, update: Update, context: CallbackContext):
-		context.bot.send_message(chat_id = update.effective_chat.id, text = update.message.text)
-
-
-	def run(self):
-		start_handler = CommandHandler('start', self.start)
-		echo_handler = MessageHandler(Filters.text & (~Filters.command), self.echo)
-		self.dispatcher.add_handler(start_handler)
-		self.dispatcher.add_handler(echo_handler)
-
-		self.updater.start_polling()
 
 
 def start():
+	print(Bcolors.WARNING)
 	print("")
 	print("------------------------------------")
 	print("|           Chatbot                |")
@@ -40,7 +30,9 @@ def start():
 	print("|q: Exit application               |")
 	print("------------------------------------")
 	print("")
+	print(Bcolors.OKGREEN)
 	user_input = input("Select: ")
+	print(Bcolors.ENDC)
 
 	if user_input == "0":
 		telegram()
@@ -60,7 +52,7 @@ def console():
 	print ("Running console application...")
 	print("")
 	cb = Chatbot()
-	cb.run()
+	cb.runConsole()
 
 def retrain():
 	trainer = Trainer()
