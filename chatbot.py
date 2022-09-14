@@ -85,11 +85,11 @@ class Chatbot():
 class TelegramBot(Chatbot):
 	def __init__(self):
 		super().__init__()
-		self.updater = Updater(token='2102452317:AAFNft6A_qjmYd4Od6p5Z0UNw1FzRmozr0g', use_context=True)
+		self.updater = Updater(token='5504159784:AAHoAqeSiGI-6Dzceo4e0bh6pHB60YUAQig', use_context=True)
 		self.dispatcher = self.updater.dispatcher
 
 	def start(self, update: Update, context: CallbackContext):
-		context.bot.send_message(chat_id = update.effective_chat.id, text="I am a bot, please talk to me")
+		context.bot.send_message(chat_id = update.effective_chat.id, text="Hi, what can I do for you?")
 
 	def echo(self, update: Update, context: CallbackContext):
 		context.bot.send_message(chat_id = update.effective_chat.id, text = update.message.text)
